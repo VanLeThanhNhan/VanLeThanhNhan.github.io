@@ -1,0 +1,83 @@
+.header {
+  position: relative;
+
+  background-image: repeating-linear-gradient(
+    15deg,
+    rgba($color-primary, 0.5),
+    rgba($color-secondary, 0.5) 2%,
+    rgba($color-primary, 0.5) 5%
+  );
+
+  z-index: 999;
+
+  &.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    background-image: repeating-linear-gradient(
+      15deg,
+      rgba($color-primary, 1),
+      rgba($color-secondary, 1) 2%,
+      rgba($color-primary, 1) 5%
+    );
+
+    #menu-bars {
+      color: #fff;
+    }
+
+    .header__banner {
+      display: none;
+    }
+  }
+
+  &__banner {
+    display: none;
+    padding: 40px;
+
+    @include screen('pc') {
+      display: block;
+    }
+  }
+
+  &__banner-text {
+    font-weight: bold;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    word-spacing: 1.5px;
+    letter-spacing: 1.8px;
+  }
+
+  &__banner-contact {
+    padding: 10px 0;
+  }
+
+  .banner-contact {
+    @include flex(row, center, center);
+    font-size: 1.6rem;
+
+    &__item {
+      padding: 0 10px;
+
+      a {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  &__banner-title {
+    font-size: 3.4rem;
+
+    text-shadow: 2px 0 0 $color-white, -2px 0 0 $color-white, 0 2px 0 $color-white, 0 -2px 0 $color-white,
+      1px 1px $color-white, -1px -1px 0 $color-white, 1px -1px 0 $color-white, -1px 1px 0 $color-white;
+
+    color: $color-secondary;
+  }
+
+  &__banner-sub {
+    font-size: 2.6rem;
+  }
+}

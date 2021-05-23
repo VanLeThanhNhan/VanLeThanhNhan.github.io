@@ -1,0 +1,17 @@
+#hot-products .title {
+  margin-bottom: 20px;
+
+  font-size: $font-size-titlePage;
+  color: $color-primary;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  h4 {
+    font-size: 0.8em;
+
+    @include screen('tablet') {
+      font-size: 1em;
+    }
+  }
+}
